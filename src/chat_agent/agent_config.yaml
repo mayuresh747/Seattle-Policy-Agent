@@ -1,0 +1,52 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  Chat Agent — Configuration File
+#  Edit this file to change ALL configurable behavior without touching code.
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── Application ──────────────────────────────────────────────────────────
+app:
+  title: "Seattle Regulatory Friction Observatory"
+  subtitle: "Explore potential policy conflicts with AI"
+  port: 8000
+  welcome_message: "Ask questions about RCW, WAC, SMC, building codes, court opinions, and more."
+
+# ── LLM Settings ─────────────────────────────────────────────────────────
+llm:
+  model: "gpt-5.1"
+  temperature: 0.1
+  max_tokens: 4096
+  conversation_memory_size: 30   # max turns (user+assistant pairs) to keep
+
+# ── System Prompt ────────────────────────────────────────────────────────
+# This is the instruction given to the LLM at the start of every conversation.
+# Modify this to change the agent's personality, domain, rules, and behavior.
+system_prompt: ""
+
+# ── Example Queries ──────────────────────────────────────────────────────
+# Shown on the welcome screen as clickable suggestion buttons.
+example_queries:
+  - "What are the requirements for ADUs in Seattle under SMC?"
+  - "RCW definition of 'family' for zoning purposes"
+  - "WAC rules for childcare center licensing"
+  - "Washington Supreme Court ruling on 'public duty doctrine'"
+  - "Governor's emergency orders on eviction moratorium"
+  - "Seattle Director's Rule on tree protection"
+  - "SPU design standards for drainage in right-of-way"
+  - "IBC seismic design category for Western Washington"
+  - "Landlord-tenant act notice requirements RCW 59.18"
+  - "Seattle noise ordinance construction hours"
+  - "Does Seattle SMC 25.09 (critical areas) conflict with WAC 365-190?"
+  - "Conflict between IBC egress requirements and Seattle Building Code amendments?"
+  - "Differences in 'affordable housing' definitions: RCW vs SMC"
+  - "State vs Seattle rules on short-term rentals (RCW 64.37 vs SMC)"
+  - "Does Seattle's minimum wage ordinance conflict with state RCW?"
+  - "SPU drainage rules vs Ecology stormwater manual (WAC)"
+  - "Washington State energy code vs Seattle energy code amendments"
+  - "Conflict between Governor's emergency proclamations and existing RCWs"
+  - "SMC zoning density limits vs State 'Missing Middle' housing bill (HB 1110)"
+  - "Court rulings interpreting 'vested rights' vs current SMC land use codes"
+
+# ── Logging ──────────────────────────────────────────────────────────────
+logging:
+  enabled: true
+  file: "chat_agent_logs.jsonl"
