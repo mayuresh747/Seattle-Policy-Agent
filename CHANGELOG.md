@@ -8,10 +8,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Planned
-- Phase 2: RAG integration with vector store
-- `requirements.txt` for reproducible installs
-- Git repository initialization
-- Parameter experimentation (temperature, model variants)
+- Phase 3: RAG integration with vector store
+- PDF ingestion pipeline for WA and Seattle codes
+
+---
+
+## [0.3.0] — 2026-02-27
+
+### Added
+- **Chat Agent UI and Backend**: Built a fully functional Web UI serving OpenAI SSE streams, mirroring the premium RAG Agent UI.
+- All configurations (model parameters, system instructions, UI texts, example queries) externalized to `src/chat_agent/agent_config.yaml`.
+- Launch script `scripts/run_chat_agent.py` for starting the FastAPI application.
+- `.gitignore` robustly configured to ignore `.agent/`, `RAG Agent/`, `.venv/`, and sensitive `.env` files.
+
+### Removed
+- Legacy testing file `src/chat_experiment.py` and empty folders `docs/` and `tests/`.
 
 ---
 
